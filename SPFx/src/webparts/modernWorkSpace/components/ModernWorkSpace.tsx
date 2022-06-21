@@ -1354,7 +1354,7 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
             </div> */}
             {/* first Webpart */}
            <div className="col-md-4  ms-sm12 ms-lg4 "  >
-           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>Internal Communication</b></div></div>
+           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'black',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')}  height="34px" style={{marginRight:"10px"}}/><b>Internal Communication</b></div></div>
            <div className={`${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4}`}  style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px',overflow:'hidden' }}>
                               
                               <div className={`ms-sm12 ms-lg12 ${styles.msSm12} ${styles.msLg12} ${styles.myProfileColumn}`}>
@@ -1434,15 +1434,15 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
                             </div>
            </div>
               {/* second webpart */}
-           <div className="col-md-4">
-           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b> My Emails <span>{this.state.mailMessageCount}</span></b></div></div>
+           <div className="col-md-8">
+           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'black',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Emailbox.png')}  height="34px" style={{marginRight:"10px"}}/><b> My Emails <span>{this.state.mailMessageCount}</span></b></div></div>
            <div className={` ${styles.scrollHidden} ${styles.column} ${styles.colOutlook} ${styles.msLg4} ${styles.zoom} ${styles.msSm12} ${styles.col2}`} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
                   {myMailElArr}
                 </div>
            </div>
             {/* third webpart */}
            <div className="col-md-4">
-           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Teams.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>TEAMS</b></div></div>
+           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'black',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Teams.png')}  height="34px" style={{marginRight:"10px"}}/><b>TEAMS</b></div></div>
            <div className={` ${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colTeams} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 <h4 className={`${styles.column2Title} ${styles.teamsTitle}`} style={{paddingRight: '55px'}}>Microsoft Teams <img src={require(`./images/setting_gear.svg`)} alt="Teams Centre" title="Teams Centre" width="21px" style={{float: 'right', cursor: 'pointer'}} onClickCapture={() => window.open("https://teams.microsoft.com/_#/apps/bafc60a5-488b-49b6-bc3a-9af2db0a761b/sections/57af5aa1-fef6-43d9-9cc2-a756219cd17f", "_blank")} /></h4>
