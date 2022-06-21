@@ -36,7 +36,8 @@ $themeColor4: #e0e1e2;
 }
 
 .modernWorkSpace {
-  background-color:white;
+  background-color: #D9DBDB;
+  padding: 10px;
   .msGridRow{
     margin: 0 -8px;
     box-sizing: border-box;
@@ -3761,6 +3762,12 @@ $themeColor4: #e0e1e2;
       display: inline-block;
     }
   }
+
+}
+
+.Col4style {
+
+  padding: 5px;
 
 }
 :global {

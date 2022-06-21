@@ -1336,7 +1336,7 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
 
       return (
         // <div className={ `${styles.modernWorkSpace} ${styles.style2} ${styles.esearch} ${this.state.isOnTeams? styles.teamsStyles : ""}` }>
-        <div className={ `${styles.modernWorkSpace} ${styles.style2} ${styles.esearch}` } style={{backgroundColor:'008AFF'}}>
+        <div className={ `${styles.modernWorkSpace} ${styles.style2} ${styles.esearch}` }>
 
              
     {/* test section */}
@@ -1353,9 +1353,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
               </div>
             </div> */}
             {/* first Webpart */}
-           <div className="col-md-4  ms-sm12 ms-lg4 ">
-           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>Internal Communication</b></div></div>
-           <div className={`${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4}`}  style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px',overflow:'hidden' }}>
+           <div className= {` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`} >
+           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>Internal Communication</b></div></div>
+           <div className={`${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4}`}  style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px',overflow:'hidden' }}>
                               
                               <div className={`ms-sm12 ms-lg12 ${styles.msSm12} ${styles.msLg12} ${styles.myProfileColumn}`}>
                                 <div id="enterpriseSearch" style={{margin: '0 auto 30px'}}>
@@ -1434,16 +1434,16 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
                             </div>
            </div>
               {/* second webpart */}
-           <div className="col-md-4">
-           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b> My Emails <span>{this.state.mailMessageCount}</span></b></div></div>
-           <div className={` ${styles.scrollHidden} ${styles.column} ${styles.colOutlook} ${styles.msLg4} ${styles.zoom} ${styles.msSm12} ${styles.col2}`} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+           <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b> My Emails <span>{this.state.mailMessageCount}</span></b></div></div>
+           <div className={` ${styles.scrollHidden} ${styles.column} ${styles.colOutlook} ${styles.msLg4} ${styles.zoom} ${styles.msSm12} ${styles.col2}`} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
                   {myMailElArr}
                 </div>
            </div>
             {/* third webpart */}
-           <div className="col-md-4">
-           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Teams.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>TEAMS</b></div></div>
-           <div className={` ${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colTeams} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+           <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Teams.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>TEAMS</b></div></div>
+           <div className={` ${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colTeams} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 <h4 className={`${styles.column2Title} ${styles.teamsTitle}`} style={{paddingRight: '55px'}}>Microsoft Teams <img src={require(`./images/setting_gear.svg`)} alt="Teams Centre" title="Teams Centre" width="21px" style={{float: 'right', cursor: 'pointer'}} onClickCapture={() => window.open("https://teams.microsoft.com/_#/apps/bafc60a5-488b-49b6-bc3a-9af2db0a761b/sections/57af5aa1-fef6-43d9-9cc2-a756219cd17f", "_blank")} /></h4>
                 <div className={ styles.column2Container }>
@@ -1460,10 +1460,10 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
            </div>
            
            {/* fourth webpart */}
-            <div  className="col-md-4">
-            <div className={`col-md-4  ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/calendar.svg')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>MY CALENDAR</b></div></div>
+            <div  className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+            <div className={`col-md-4  ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/calendar.svg')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>MY CALENDAR</b></div></div>
             <div className={`${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.col4}`} style={{
-              height: '327px', maxHeight: '327',borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1'
+              height: '327px', maxHeight: '327',borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1'
             }}>
               {/* <h4>MY CALENDAR</h4> */}
               <div className={`${styles.eventContainer} ${styles.calendarEvent} ${styles.scrollHidden}`}>
@@ -1476,9 +1476,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
             </div>
 
             {/* fifth webpart */}
-            <div className="col-md-4">
-            <div className={` col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Annoucement.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>ANNOUNCEMENT</b></div></div>
-            <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} ${styles.colPlanner} `}  style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}> 
+            <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+            <div className={` col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Annoucement.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>ANNOUNCEMENT</b></div></div>
+            <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} ${styles.colPlanner} `}  style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}> 
                 {/* <h4 className={styles.column2Title}>ANNOUNCEMENTS</h4> */}
                 <div className={ styles.column2Container }>
                   <div className={` ms-Grid-row ${styles.msGridRow} ${styles.scrollHidden} ${styles.announcements} `}>
@@ -1490,10 +1490,10 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
             </div>
 
           {/* sixth webpart */}
-          <div className="col-md-4">
-          <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/EVENT.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>EVENTS</b></div></div>
+          <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+          <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/EVENT.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>EVENTS</b></div></div>
           <div className={`${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.col4}`} style={{
-              height: '327px', maxHeight: '327px',borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1'
+              height: '327px', maxHeight: '327px',borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1'
             }}>
                 {/* <h4>EVENTS</h4> */}
                 <div className={`${styles.eventContainer} ${styles.scrollHidden}`}>
@@ -1504,9 +1504,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
               </div>
           </div>
              {/* seventh webpart */}
-          <div className="col-md-4">
-          <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/MD Desk.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>MD's DESK</b></div></div>
-          <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} ${styles.colPlanner} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+          <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+          <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/MD Desk.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>MD's DESK</b></div></div>
+          <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} ${styles.colPlanner} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
                 <div>
                   {/* <h4 className={`${styles.column2Title}`}>Reliance</h4> */}
                  <img src={require('./images/visionmission.png')} style={{
@@ -1519,8 +1519,8 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
           </div>
             {/* Eight webpart */}
           <div className="col-md-8">
-          <div className={` col-md-8 ${styles.msSm12} ${styles.msLg12}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',minWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/microsoft-onedrive-2019.svg')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>ONE DRIVE</b></div></div>
-          <div className={` ${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.colTeams} ${styles.colRecentDoc}  `}style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+          <div className={` col-md-8 ${styles.msSm12} ${styles.msLg12}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',minWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/microsoft-onedrive-2019.svg')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>ONE DRIVE</b></div></div>
+          <div className={` ${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.colTeams} ${styles.colRecentDoc}  `}style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 {/* <h4 className={`${styles.column2Title} ${styles.onedriveTitle}`}>OneDrive</h4> */}
                 <div className={ styles.column2Container }>
@@ -1536,9 +1536,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
          </div>
 
          {/* ninth webpart */}
-         <div className="col-md-4">
-         <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/MD Desk.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>MY TASK</b></div></div>
-         <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} ${styles.colPlanner} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+         <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+         <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/MD Desk.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>MY TASK</b></div></div>
+         <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} ${styles.colPlanner} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 {/* <h4 className={styles.column2Title}>MY TASKS</h4> */}
                 <div className={ styles.column2Container }>
@@ -1552,8 +1552,8 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
 
          {/* tenth webpart */}
          <div className="col-md-8">
-         <div className={` col-md-8 ${styles.msSm12} ${styles.msLg12}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Collaboration.png')} width="7%" height="40px" style={{marginRight:"10px"}}/><b>ENGAGEMENT PROGRESS</b></div></div>
-         <div className={` ${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.colLauncher} ${styles.colExtns} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+         <div className={` col-md-8 ${styles.msSm12} ${styles.msLg12}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Collaboration.png')} width="7%" height="40px" style={{marginRight:"10px"}}/><b>ENGAGEMENT PROGRESS</b></div></div>
+         <div className={` ${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.colLauncher} ${styles.colExtns} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
               {/* <h4 className={styles.column2Title}>ENGAGEMENT PROGRESS</h4> */}
               <div className={ styles.column2Container }>
@@ -1577,9 +1577,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
        </div>
 
        {/* eleventh webpart */}
-       <div className="col-md-4">
-       <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/analytic.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>PROCESSS STAGES</b></div></div>
-       <div className={`${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.col4} ${styles.colProcessStage}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+       <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+       <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/analytic.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>PROCESSS STAGES</b></div></div>
+       <div className={`${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.col4} ${styles.colProcessStage}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 {/* <h4 className={`${styles.column2Title}`}>PROCESS STAGES</h4> */}
                 <div className={ styles.extnSearch }>
@@ -1594,8 +1594,8 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
        </div>
        {/* twelfth webpart */}
        <div className="col-md-8">
-       <div className={` col-md-8 ${styles.msSm12} ${styles.msLg8}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',minWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/ellipsis1.svg')} width="6%" height="34px" style={{marginRight:"10px"}}/><b>PROCESS STAGE ANALYTICS</b></div></div>
-       <div className={` ${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.colTeams} ${styles.colSPSites} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px', maxHeight: '327px'}}>
+       <div className={` col-md-8 ${styles.msSm12} ${styles.msLg8}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',minWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/ellipsis1.svg')} width="6%" height="34px" style={{marginRight:"10px"}}/><b>PROCESS STAGE ANALYTICS</b></div></div>
+       <div className={` ${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.colTeams} ${styles.colSPSites} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px', maxHeight: '327px'}}>
               <div >
                 {/* <h4 className={`${styles.column2Title} ${styles.analyticsTitle}`}>Process Stage Analytics
                   <button className={styles.moreButton}><img src={require('./images/ellipsis1.svg')} width="20px" /></button> 
@@ -1617,9 +1617,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
        </div>
          
          {/* thirteenth webpart */}
-         <div className="col-md-4">
-         <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Employee Analytics.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>DEPARTMENTAL ANALYTICS</b></div></div>
-         <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colTeams} ${styles.colSPSites} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+         <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+         <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow :'1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Employee Analytics.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>DEPARTMENTAL ANALYTICS</b></div></div>
+         <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colTeams} ${styles.colSPSites} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 {/* <h4 className={`${styles.column2Title} ${styles.analyticsTitle}`}>Departmental Analytics
                   <button className={styles.moreButton}><img src={require('./images/ellipsis1.svg')} width="20px" /></button>
@@ -1641,8 +1641,8 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
          <div className= "col-md-8">
 
         
-         <div className={` col-md-8 ${styles.msSm12} ${styles.msLg8}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',minWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/analytic.png')} width="6%" height="34px" style={{marginRight:"10px"}}/><b>MY ANALYTICS</b></div></div>
-         <div className={` ${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.colTeams} ${styles.colSPSites} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px', maxHeight: '327px'}}>
+         <div className={` col-md-8 ${styles.msSm12} ${styles.msLg8}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',minWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/analytic.png')} width="6%" height="34px" style={{marginRight:"10px"}}/><b>MY ANALYTICS</b></div></div>
+         <div className={` ${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.colTeams} ${styles.colSPSites} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px', maxHeight: '327px'}}>
               <div>
                 {/* <h4 className={`${styles.column2Title} ${styles.analyticsTitle}`}>MyANALYTICS
                   <button className={styles.moreButton}><img src={require('./images/ellipsis1.svg')} width="20px" /></button>
@@ -1678,9 +1678,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
             </div>
             {/* fifteenth webpart */}
 
-            <div className="col-md-4">
-            <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/LOB.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>LAUNCHER</b></div></div>
-            <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px',overflow:'hidden' }}>
+            <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+            <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/LOB.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>LAUNCHER</b></div></div>
+            <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px',overflow:'hidden' }}>
               <div>
                 {/* <h4 className={`${styles.column2Title} ${styles.launcherTitle}`}>Launcher</h4> */}
                 <div className={ styles.column2Container }>
@@ -1757,9 +1757,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
             </div>
             </div>
             {/* sixteenth webpart */}
-            <div className="col-md-4">
-            <div className={` col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/LOB.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>LINE OF BUSINESS APPS</b></div></div>
-            <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+            <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+            <div className={` col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/LOB.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>LINE OF BUSINESS APPS</b></div></div>
+            <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} `} style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 {/* <h4 className={styles.column2Title}>LINE OF BUSINESS APPS</h4> */}
                 <div className={ styles.column2Container }>
@@ -1788,9 +1788,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
             </div>
 
             {/* seventeenth webpart */}
-            <div className="col-md-4">
-            <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Employee Analytics.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>STAFF DIRECTORY</b></div></div>
-            <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} ${styles.colExtns} `}style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+            <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+            <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow :'1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Employee Analytics.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>STAFF DIRECTORY</b></div></div>
+            <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colLauncher} ${styles.colExtns} `}style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 {/* <h4 className={styles.column2Title}>STAFF DIRECTORY</h4> */}
                 <div className={ styles.column2Container }>
@@ -1814,9 +1814,9 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
             </div>
 
            {/* eighteenth webpart */}
-           <div className='col-md-4'>
-           <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white' ,maxWidth:'100%',height:'53px',textAlign:'center',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/collaboration.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>COLLABORATION</b></div></div>
-           <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colTwitter} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px'}}>
+           <div className={` col-md-4  ms-sm12 ms-lg4 ${styles.Col4style}`}>
+           <div className={`col-md-4 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white' ,maxWidth:'100%',height:'53px',textAlign:'center',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/collaboration.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>COLLABORATION</b></div></div>
+           <div className={` ${styles.column2} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colTwitter} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               
               <div>
                   {/* <h4 className={styles.column2Title}>COLLABORATION</h4> */}
@@ -1860,8 +1860,8 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
            </div>
            {/* nineteenth webpart */}
             <div className="col-md-8">
-            <div className={` col-md-8 ${styles.msSm12} ${styles.msLg8}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',minWidth:'100%',height:'53px',textAlign:'center',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/LOB.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>TIME SHEET</b></div></div>
-            <div className={`${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.col4} ${styles.colProcessStage}`}style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px', maxHeight: '327px'}}>
+            <div className={` col-md-8 ${styles.msSm12} ${styles.msLg8}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',minWidth:'100%',height:'53px',textAlign:'center',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/LOB.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>TIME SHEET</b></div></div>
+            <div className={`${styles.column2} ms-sm12 ms-lg8 ${styles.msSm12} ${styles.msLg8} ${styles.col4} ${styles.colProcessStage}`}style={{borderRadius:'0px',marginTop:'10px',backgroundColor:'white',minWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px', maxHeight: '327px'}}>
                 <div>
                   {/* <h4 className={`${styles.column2Title}`}>TIME SHEET</h4> */}
                   <div className={ styles.extnSearch }>
@@ -1879,8 +1879,8 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
             {/* 20th webpart */}
 
             <div className="col-md-12">
-            <div className={` col-md-12 ${styles.msSm12} ${styles.msLg12}`} style={{maxWidth:'100%',borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/LOB.png')} width="5%" height="34px" style={{marginRight:"10px"}}/><b>OPPORTUNITIES</b></div></div>
-            <div className={`${styles.column2} ms-sm12 ms-lg12 ${styles.msSm8} ${styles.msLg12} ${styles.col4} ${styles.colOpportunities}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px ',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px', maxHeight: '327px'}}>
+            <div className={` col-md-12 ${styles.msSm12} ${styles.msLg12}`} style={{maxWidth:'100%',borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/LOB.png')} width="5%" height="34px" style={{marginRight:"10px"}}/><b>OPPORTUNITIES</b></div></div>
+            <div className={`${styles.column2} ms-sm12 ms-lg12 ${styles.msSm8} ${styles.msLg12} ${styles.col4} ${styles.colOpportunities}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px ',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px', maxHeight: '327px'}}>
                 <div>
                   {/* <h4 className={`${styles.column2Title}`}>OPPORTUNITIES</h4> */}
                   <div className={ styles.extnSearch }>
@@ -1896,8 +1896,8 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
 
             {/* last webpart */}
             <div className="col-md-12" >
-            <div className={` col-md-12  ${styles.msSm12} ${styles.msLg12}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',height:'53px',textAlign:'center',color:'#1e90ff',maxWidth:'100%',paddingTop:'10px',boxShadow : '5px 4px 9px 10px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="5%" height="34px" style={{marginRight:"10px"}}/><b>PRODUCT CATALOGUE</b></div></div>
-            <div className={` ${styles.column2} ms-sm12 ms-lg12 ${styles.msSm12} ${styles.msLg12} ${styles.colTeams} ${styles.colSPSites} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px ',backgroundColor:'white',maxWidth:'100%',boxShadow : '5px 4px 9px 10px #f1f1f1',height:'327px', maxHeight: '327px'}}>
+            <div className={` col-md-12  ${styles.msSm12} ${styles.msLg12}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',height:'53px',textAlign:'center',color:'#1e90ff',maxWidth:'100%',paddingTop:'10px',boxShadow :'1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="5%" height="34px" style={{marginRight:"10px"}}/><b>PRODUCT CATALOGUE</b></div></div>
+            <div className={` ${styles.column2} ms-sm12 ms-lg12 ${styles.msSm12} ${styles.msLg12} ${styles.colTeams} ${styles.colSPSites} `} style={{borderRadius:'0px',margin:'10px 0px 0px 0px ',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px', maxHeight: '327px'}}>
                 <div>
                   {/* <h4 className={`${styles.column2Title}`}>Product Catalogue</h4> */}
 
