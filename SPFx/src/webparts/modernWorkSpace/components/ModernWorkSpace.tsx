@@ -1353,7 +1353,7 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
               </div>
             </div> */}
             {/* first Webpart */}
-           <div className= {` col-md-4  ms-sm12 ms-lg4 ${styles.col4style}`} >
+           <div className="col-md-4  ms-sm12 ms-lg4 "  >
            <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',height:'53px',color:'#1e90ff',paddingTop:'10px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/bubble-chat.png')} width="13%" height="34px" style={{marginRight:"10px"}}/><b>Internal Communication</b></div></div>
            <div className={`${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4}`}  style={{borderRadius:'0px',margin:'10px 0px 0px 0px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px',overflow:'hidden' }}>
                               
