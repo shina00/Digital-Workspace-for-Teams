@@ -9,6 +9,7 @@ export interface IGraphUserProfile{
     userPrincipalName: string;
     businessPhones?: string[];
     employeeId?: string;
+    
 }
 
 export interface IGraphUserProfileItems{

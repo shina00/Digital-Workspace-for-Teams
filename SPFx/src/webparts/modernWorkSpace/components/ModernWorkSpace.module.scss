@@ -36,7 +36,7 @@ $themeColor4: #e0e1e2;
 }
 
 .modernWorkSpace {
-  background-color: #D9DBDB;
+  background-color: rgb(243, 242, 241);
   padding: 15px;
   .msGridRow{
     margin: 0 -8px;
@@ -547,7 +547,7 @@ $themeColor4: #e0e1e2;
 
   .col1Welcome{
     .col1ProfilePic{
-      width: 100px; height: 100px;
+      width: 70px; height: 70px;
       background: url('./images/account.svg') no-repeat 50% 50%;
       background-size: cover;
       border-radius: 50%;
@@ -565,14 +565,14 @@ $themeColor4: #e0e1e2;
       }
       &:nth-of-type(1){
         color: #be1f2e;
-        font-size: 16px;
+        font-size: 15px;
         text-transform: uppercase;
         font-weight: 500;
     
       }
       &:nth-of-type(2){
         color: #0b4a7a;
-        font-size: 14px;
+        font-size: 12px;
         text-transform: uppercase;
         font-weight: 600;
       }
@@ -594,14 +594,15 @@ $themeColor4: #e0e1e2;
     }
   }
   .col1Members{
-    margin: 10px 15px 5px;
+    margin: 10px 0px 4px 0px;
     color: #485bd5;
-    font-size: 16px;
+    font-size: 13px;
+    text-align: center;
     
     > p:first-of-type{
-      background: url('./images/microsoft-teams-2019.svg') 0px 50% no-repeat;
-      background-size: contain;
-      padding-left: 30px;
+    //  background: url('./images/microsoft-teams-2019.svg') 0px 50% no-repeat;
+    //  background-size: contain;
+      padding-left: 0px;
     }
     > div{
       padding-top: 5px;
@@ -643,7 +644,7 @@ $themeColor4: #e0e1e2;
     }
     .col2MailSection{
       padding-bottom: 5px;
-      border-bottom: 1px solid #443f3e7d;
+      //border-bottom: 1px solid #443f3e7d;
       color: #443f3e;
       text-decoration: none;
       display: inline-block;
@@ -701,6 +702,13 @@ $themeColor4: #e0e1e2;
       }
     }
   }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
 
   .col4{
     padding: 10px;
@@ -3208,6 +3216,8 @@ $themeColor4: #e0e1e2;
       .col2MailContainer{
         background-color: #eff0f5;
         padding-top: 3px;
+        margin: 0px 15px 5px 30px;
+        border-radius: 5px;
       }
       .col2MailContent{
         height: 58px;
@@ -3260,9 +3270,10 @@ $themeColor4: #e0e1e2;
     background-color: #f0f0f0;
     margin: auto;
     height: 15px;
-    border-radius: 15px;
+    border-radius: 5px;
     outline: 0;
     color: #9dbfaf;
+    font-size: 12px;
   }
   
   .searchTerm:focus{

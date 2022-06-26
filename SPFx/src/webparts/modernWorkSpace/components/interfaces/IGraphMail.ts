@@ -6,6 +6,8 @@ export interface IGraphMail{
     bodyPreview: string;
     webLink: string;
     from: object;
+    
+
 }
 
 export interface IGraphMailItems{
@@ -29,5 +31,6 @@ export class GraphMail{
         this.bodyPreview = item.bodyPreview;
         this.webLink = item.webLink;
         this.from = item.from["emailAddress"]["name"];
+        
     }
 }
