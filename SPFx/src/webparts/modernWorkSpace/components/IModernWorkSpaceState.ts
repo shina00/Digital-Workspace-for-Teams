@@ -24,6 +24,7 @@ export interface IModernWorkSpaceState {
   DynamicOpportunities: DynamicsOpp[];
   isConnected: Boolean;
   isOnTeams?: Boolean;
+  myTeams: MicrosoftGraph.Group[];
   notificationCount: number;
   allUser: GraphUserProfile[];
   myRecentUsers: GraphUserProfile[];

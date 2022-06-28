@@ -14,6 +14,7 @@ export interface IModernWorkSpaceProps {
   // hasTeamsContext: boolean;
   // userDisplayName: string;
    spHttpClient: SPHttpClient;
+   headerColor?: string;
    pageContext: PageContext;
    context: WebPartContext;
    serviceScope: ServiceScope;

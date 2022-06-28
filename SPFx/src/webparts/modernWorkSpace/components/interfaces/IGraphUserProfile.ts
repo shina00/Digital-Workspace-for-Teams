@@ -1,4 +1,5 @@
 export interface IGraphUserProfile{
+    filter:string;
     id: string;
     displayName: string;
     mail: string;
@@ -31,6 +32,7 @@ export class GraphUserProfile{
     public manager?: any;
     public Birthday?: Date;
     public dummyBirthday?: Date;
+    public filter:string;
 
     
 
@@ -46,6 +48,7 @@ export class GraphUserProfile{
         this.businessPhones = item.businessPhones ? item.businessPhones : [];   
         this.Birthday = item.employeeId ? new Date(item.employeeId) : null;
         this.dummyBirthday = item.employeeId ? new Date(item.employeeId) : null;
+        this.filter = item.filter;
     }
 }
 

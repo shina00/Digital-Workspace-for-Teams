@@ -185,6 +185,7 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
       isOnTeams: false,
       notificationCount: 0,
       allUser: [],
+      myTeams: [],
       DynamicOpportunities: [],
       myRecentUsers: [],
       myProfile: null,
@@ -869,10 +870,13 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
         let docClass = extns.indexOf(docExtn) !== -1 ? styles[`${docExtn}Doc0`] : styles.fileDoc0;
                 
         return(
-          <p className={`${styles.docType} ${docClass}`}>
+          <div style={{backgroundColor:"#eff0f5",borderRadius:"5px"}}>
+           <p className={`${styles.docType} ${docClass}`} >
             <a href={doc.webUrl} target="_blank">{doc.name}</a>
             <span>{this.utilityMethod.convertDateTime(doc.lastModifiedDateTime, "-")}</span>
           </p>
+          </div>
+         
         );
       });
 
@@ -889,36 +893,49 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
         );
       });
 
-      const myUpcomingEvents: JSX.Element[] = this.state.companyEvents.map(event => {
+      const myUpcomingEvents: JSX.Element[] = this.state.companyEvents.map((event, i)  => {
+        let change =document.getElementsByClassName('bgcolor');
+        var str = change.toString(); 
+               str =i%5===0 ? "#49BDF2" : i%5===1 ? "#E8EBFA" : i%5===2 ? "#E73550" : i%5===3 ? "#E7F2DA" : i%5===4 ?  "#E8EBFA" : "#E7F2DA";
+
+       
         return(
-        <div className={`${styles.col4Event}`} style={{height:"64px"}}>
-          <div className={`${styles.col4EvtDate}`}>
-              <p className={`${styles.col4EvtDay}`} >{formatDateTime(event.EventDate.getDate())}</p>
-              <p className={`${styles.col4EvtMnth}`} >{formatDateTime(this.utilityMethod.monthsOfTheYear[event.EventDate.getMonth()])}</p>
+        <div className="row" style={{width:"100%",padding:"10px"}}>
+   
+          <div className= "col-md-3" style={{fontSize:"small"}}>
+              <b className={`${styles.col4EvtDay}`} >{event.EventDate.getDate()}</b>
+              <p className={`${styles.col4EvtMnth}`} >{this.utilityMethod.monthsOfTheYear[event.EventDate.getMonth()]}</p>
           </div>
-          <div className={`${styles.col4EvtDetails}`}>
-              <p className={`${styles.col4EvtTitle}`}>{event.Title}</p>
+        
+           <div className="col-md-9 bgcolor" style={{backgroundColor: str, borderRadius:'5px',fontSize: 'small'}} >
+              <b className={`${styles.col4EvtTitle}`}>{event.Title}</b>
               <p className={`${styles.col4EvtLocatn}`}>{event.Location}</p>
               <p className={`${styles.col4EvtDesc}`} dangerouslySetInnerHTML={{__html: event.Description}}></p>
-          </div>
+          </div> 
         </div>
         );
       });
 
-      const myCalendarEvents: JSX.Element[] = this.state.myCalendar.map(event => {
+      const myCalendarEvents: JSX.Element[] = this.state.myCalendar.map((event,i) => {
+
+        let change =document.getElementsByClassName('bgcolor');
+        var str = change.toString(); 
+               str =i%5===0 ? "#49BDF2" : i%5===1 ? "#E8EBFA" : i%5===2 ? "#E73550" : i%5===3 ? "#E7F2DA" : i%5===4 ?  "#E8EBFA" : "#E7F2DA";
+
+       
         return (
-          <div className={`${styles.col4Event}`}>
-              <div className={`${styles.col4EvtDate}`}>
-                <p className={`${styles.col4EvtDay}`}>
+          <div className="row"  style={{width:"100%",padding:"10px"}}>
+              <div className= "col-md-2 " style={{fontSize:"small"}}>
+                <b className={`${styles.col4EvtDay}`}>
                   {event.startTime.getDate()}
-                </p>
+                </b>
                 <p className={`${styles.col4EvtMnth}`}>
                   {this.utilityMethod.monthsOfTheYear[event.startTime.getMonth()]}
                 </p>
               </div>
-            <div>
-              <div className={`${styles.col4EvtDetails}`}>
-              <p className={`${styles.col4EvtTitle}`}><a href={event.webLink} target="_blank" >{event.subject}</a></p>
+            
+              <div className="col-md-10 bgcolor" style={{backgroundColor: str, borderRadius:'5px',fontSize: 'small'}} >
+              <b className={`${styles.col4EvtTitle}`}><a href={event.webLink} target="_blank" >{event.subject}</a></b>
               <p className={`${styles.col4EvtLocatn}`}>
                 {
                 event.isOnlineMeeting ? <a href={event.onlineMeetingUrl}>TEAMS</a>: event.location.displayName
@@ -926,18 +943,19 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
                   : "Location Unspecified"}
               </p>
               <p
-                className={`${styles.col4EvtDesc}`}
+                className={`${styles.col4EvtDesc}`} style={{overflow:"hidden"}}
                 dangerouslySetInnerHTML={{ __html: event.bodyPreview }}
               ></p>
-            </div>
-            </div>
-            {(event.endTime.getTime() - event.startTime.getTime() === 86400000) ?
+                 {(event.endTime.getTime() - event.startTime.getTime() === 86400000) ?
             <p className={styles.col4EvtTime}>ALL DAY</p> :
-            <p className={styles.col4EvtTime}>
+            <b className={styles.col4EvtTime}>
               <span>{this.utilityMethod.getFormattedTime(event.startTime)}</span>
               <span>{">>>>>"}</span>
               <span>{this.utilityMethod.getFormattedTime(event.endTime)}</span>
-            </p>}
+            </b>}
+            </div>
+        
+         
           </div>
         );
       });
@@ -1444,7 +1462,7 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
            </div>
               {/* second webpart */}
            <div className="col-md-8">
-           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{border:'solid 1px rgba(229,228,226,0.7)', borderRadius:'5px',margin:'10px 0px 0px 0px',backgroundColor:'#5b5fc7',maxWidth:'100%',height:'45px',color:'white',paddingTop:'5px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Emailbox.png')}  height="34px" style={{marginRight:"10px"}}/><b> My Emails <span style={{border:'solid 1px grey',padding:'5px',fontSize:'small',borderRadius:'5px'}}>{this.state.mailMessageCount}</span></b></div></div>
+           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{border:'solid 1px rgba(229,228,226,0.7)', borderRadius:'5px',margin:'10px 0px 0px 0px',backgroundColor:'#5b5fc7',maxWidth:'100%',height:'45px',color:'white',paddingTop:'5px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/Envelope2.png')}  height="34px" style={{marginRight:"10px"}}/><b> My Emails <span style={{border:'solid 1px grey',padding:'5px',fontSize:'small',borderRadius:'5px'}}>{this.state.mailMessageCount}</span></b></div></div>
            <div className={` ${styles.scrollHidden} ${styles.column} ${styles.colOutlook} ${styles.msLg4} ${styles.zoom} ${styles.msSm12} ${styles.col2}`} style={{border:'solid 1px rgba(229,228,226,0.7)', borderRadius:'5px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
                   {myMailElArr}
                 </div>
@@ -1516,7 +1534,7 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
              {/* seventh webpart */}
             
             <div className="col-md-4">
-           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{border:'solid 1px rgba(229,228,226,0.7)', borderRadius:'5px',margin:'10px 0px 0px 0px',backgroundColor:'#5b5fc7',maxWidth:'100%',height:'45px',color:'white',paddingTop:'5px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/TeamsImage.png')}  height="34px" style={{marginRight:"10px"}}/><b>TEAMS</b></div></div>
+           <div className={`col-md-4 col-lg-4 col-sm-12 ${styles.msSm12} ${styles.msLg4}`} style={{border:'solid 1px rgba(229,228,226,0.7)', borderRadius:'5px',margin:'10px 0px 0px 0px',backgroundColor:'#5b5fc7',maxWidth:'100%',height:'45px',color:'white',paddingTop:'5px',boxShadow : '1px 1px 1px 2px #f1f1f1'}}><div style={{flexDirection:"row",justifyContent:"space-between"}}><img src={require('./images/TeamsIcon.png')}  height="34px" style={{marginRight:"10px"}}/><b>TEAMS</b></div></div>
            <div className={` ${styles.column} ms-sm12 ms-lg4 ${styles.msSm12} ${styles.msLg4} ${styles.colTeams} `} style={{border:'solid 1px rgba(229,228,226,0.7)', borderRadius:'5px',marginTop:'10px',backgroundColor:'white',maxWidth:'100%',boxShadow : '1px 1px 1px 2px #f1f1f1',height:'327px'}}>
               <div>
                 <h4 className={`${styles.column2Title} ${styles.teamsTitle}`} style={{paddingRight: '55px'}}>Microsoft Teams <img src={require(`./images/setting_gear.svg`)} alt="Teams Centre" title="Teams Centre" width="21px" style={{float: 'right', cursor: 'pointer'}} onClickCapture={() => window.open("https://teams.microsoft.com/_#/apps/bafc60a5-488b-49b6-bc3a-9af2db0a761b/sections/57af5aa1-fef6-43d9-9cc2-a756219cd17f", "_blank")} /></h4>
@@ -2522,14 +2540,12 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
     var today = new Date(), later = new Date();
     later.setDate(today.getDate() + 7);
 
-    // this.props.spHttpClient.get(`${this.props.siteUrl}/_api/web/lists/getbytitle('Events')/items?$filter=EventDate ge datetime'${today.toISOString()}' or EndDate ge datetime'${today.toISOString()}'&$orderBy=EventDate asc&$top=15`, SPHttpClient.configurations.v1)
-    // this.props.spHttpClient.get(`${this.props.siteUrl}/_vti_bin/listdata.svc/Events`, SPHttpClient.configurations.v1)
-    this.props.spHttpClient.get(`${this.props.siteUrl}/_api/web/lists/getbytitle('Events')/items?$filter=EventDate ge datetime'${today.toISOString()}' or EndDate ge datetime'${today.toISOString()}'&$orderBy=EventDate asc&$top=999`, SPHttpClient.configurations.v1)
+    this.props.spHttpClient.get(`${this.props.siteUrl}/_api/web/lists/getbytitle('Events')/items?$filter=EventDate ge datetime'${today.toISOString()}' or EndDate ge datetime'${today.toISOString()}'&$orderBy=EventDate asc&$top=15`, SPHttpClient.configurations.v1)
     .then((response: SPHttpClientResponse) => response.json())
     .then((resp: ISPEventItems) => {
-      console.log("EVENT ApiResponse", resp);
-      const result = resp.value.filter(event => event.Title.indexOf("Deleted") !== 0).map(event => new SPEvent(event)).sort((a,b)=> Number(a.EventDate) - Number(b.EventDate)).filter((v,i) => i<=30);
-      console.log("EVENT parsedRESULT", result);
+      //console.log(resp);
+      const result = resp.value.map(event => new SPEvent(event));
+      //console.log(result);
       this.setState({companyEvents: result});
     })
     .catch(error => {
@@ -3242,3 +3258,4 @@ export default class ModernWorkSpace extends React.Component<IModernWorkSpacePro
   };
 
 }
+
